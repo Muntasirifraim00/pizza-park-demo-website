@@ -8,6 +8,7 @@ import Bounce from "react-reveal/Bounce";
 import Slide from "react-reveal/Slide";
 import useCourses from "../../hooks/useCourses.js";
 
+
 const Home = () => {
   const history = useHistory();
   const [courses] = useCourses();
@@ -53,21 +54,16 @@ const Home = () => {
               </Bounce>
             </div>
           </div>
+
+        
+
         </Container>
       </div>
       <div
         style={{ background: `url(${bgImage})`, backgroundAttachment: "fixed" }}
       >
         <Container className="py-5">
-          <Slide left>
-            <h2 className="text-center text-white mb-2">Featured Courses</h2>
-          </Slide>
-          <Slide right>
-            <p className="text-muted text-center">
-              Here you can find our all latest courses. Choose some of them and
-              try to grow up your skills.
-            </p>
-          </Slide>
+        
           <Row>
             {featureCourses?.map((course) => (
               <Course course={course} key={course.key}></Course>
